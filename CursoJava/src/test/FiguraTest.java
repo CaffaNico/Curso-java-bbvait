@@ -32,13 +32,13 @@ public class FiguraTest {
 		triangulo       = new Triangulo("tri",12,8);
 		rectangulo      = new Rectangulo("rec",15,10);
 		poligonoRegular = new PoligonoRegular("poli",12,15,10);
-		figuras = new ArrayList<Figura>();
-		figuras.add(new Cuadrado("cua1",10));
-		figuras.add(new Circulo("cir1",10));
-		figuras.add(new Cuadrado("cua2",10));
-		figuras.add(new Circulo("cir2",10));
-		figuras.add(new Cuadrado("cua1",10));
-		figuras.add(new Circulo("cir3",10));
+		figuras         = new ArrayList<Figura>();
+		figuras.add(      new Cuadrado("cua1",10));
+		figuras.add(      new Circulo("cir1",10));
+		figuras.add(      new Cuadrado("cua2",10));
+		figuras.add(      new Circulo("cir2",10));
+		figuras.add(      new Cuadrado("cua1",10));
+		figuras.add(      new Circulo("cir3",10));
 	
 	}
 
@@ -52,32 +52,52 @@ public class FiguraTest {
 		figuras         = null;
 	}
 
-	@Test
-	public void testCalcularPerimetro() {
+	/*@Test
+	public void testCalcularPerimetro_cuadrado() {
 		//valor esperado,metodo a tester,presicion
 		assertEquals(40,cuadrado.calcularPerimetro(),0.1);
 		
 	}
 
 	@Test
-	public void testCalcularSuperficie() {
+	public void testCalcularSuperficie_cuadrado() {
 		assertEquals(100,cuadrado.calcularSuperficie(),0.1);
 	}
 
 	@Test
-	public void testGetValores() {
+	public void testGetValores_cuadrado() {
 		assertEquals("L=10.0",cuadrado.getValores());
+	}*/
+	
+	@Test
+	public void testCalcularPerimetro_circulo() {
+		//valor esperado,metodo a tester,presicion
+		assertEquals(43,circulo.calcularPerimetro(),1);
+		
+	}
+
+	@Test
+	public void testCalcularSuperficie_circulo() {
+		assertEquals(14,circulo.calcularSuperficie(),0.1);
+	}
+
+	@Test
+	public void testGetValores_circulo() {
+		assertEquals("R=7.0",circulo.getValores());
 	}
 	
 	@Test
 	public void testGetNombre() {
-		assertEquals("cua1",cuadrado.getNombre());
+		//assertEquals("cua1",cuadrado.getNombre());
+		assertEquals("cir1",circulo.getNombre());
 	}
 	
 	@Test
 	public void testEqualsyHashCode() {
-		Cuadrado cPrueba = new Cuadrado("cua1", 10);
-		assertTrue(figuras.contains(cPrueba));
+		//Cuadrado cPrueba = new Cuadrado("cua1", 10);
+		//assertTrue(figuras.contains(cPrueba));
+		Circulo ciPrueba = new Circulo("cir1",10);
+		assertTrue(figuras.contains(ciPrueba));
 	}
 
 }
