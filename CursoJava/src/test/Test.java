@@ -8,7 +8,7 @@ import repaso.Triangulo;
 public class Test {
 
 	public static void main(String[] args) {
-		Cuadrado c1 = new Cuadrado("c1",12);
+		Cuadrado c1 = new Cuadrado("c1",10);
 		Triangulo t1 = new Triangulo("t1",12,8);
 		Rectangulo r1 = new Rectangulo("r1",16,10);
 		PoligonoRegular pr1= new PoligonoRegular("pr1",10,8,8);
@@ -35,6 +35,8 @@ public class Test {
 		System.out.println(pr1.getValores());
 		System.out.println(pr1.calcularPerimetro());
 		System.out.println(pr1.calcularSuperficie());
+		
+		System.out.println("Fin de los datos.");
 		
 
 	}
