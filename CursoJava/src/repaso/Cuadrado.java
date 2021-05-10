@@ -1,16 +1,19 @@
 package repaso;
 
-public class Circulo extends Figura {
-	private float radio;
+public class Cuadrado extends Figura {
 	
-	public Circulo() {
+	private float lado;
+	
+	
+
+	public Cuadrado() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Circulo(String nombre,float radio) {
+	public Cuadrado(String nombre,float lado) {
 		super(nombre);
-		this.radio = radio;
+		this.lado = lado;
 	}
 
 	@Override
@@ -30,20 +33,21 @@ public class Circulo extends Figura {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
-	public float getRadio() {
-		return radio;
+	public float getLado() {
+		return lado;
 	}
 
-	public void setRadio(float radio) {
-		this.radio = radio;
+	public void setLado(float lado) {
+		this.lado = lado;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + Float.floatToIntBits(radio);
+		result = prime * result + Float.floatToIntBits(lado);
 		return result;
 	}
 
@@ -55,15 +59,18 @@ public class Circulo extends Figura {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Circulo other = (Circulo) obj;
-		if (Float.floatToIntBits(radio) != Float.floatToIntBits(other.radio))
+		Cuadrado other = (Cuadrado) obj;
+		if (Float.floatToIntBits(lado) != Float.floatToIntBits(other.lado))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Circulo [radio=" + this.radio + "]";
+		return "Cuadrado [lado=" + this.lado + "]";
 	}
 	
+	
+	
+
 }

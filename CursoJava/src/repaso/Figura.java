@@ -34,6 +34,5 @@ public abstract class Figura implements Model {
 		this.nombre = nombre;
 	}
 
-
 	
 }
