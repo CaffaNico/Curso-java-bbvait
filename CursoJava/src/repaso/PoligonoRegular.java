@@ -8,17 +8,19 @@ public class PoligonoRegular extends Figura {
 	@Override
 	public float calcularPerimetro() {
 		// TODO Auto-generated method stub
-		return 0;
+		return CantidadDeLados*lado;
 	}
 	@Override
 	public float calcularSuperficie() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (float) (this.apotema*this.apotema*this.CantidadDeLados*Math.tan(Math.PI/this.CantidadDeLados));
 	}
 	@Override
 	public String getValores() {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuilder sb = new StringBuilder("A=");
+		sb.append(apotema +", CL=");
+		sb.append(CantidadDeLados+", L=");
+		sb.append(lado);
+		return sb.toString();
 	}
 	public PoligonoRegular() {
 		super();
@@ -66,7 +68,7 @@ public class PoligonoRegular extends Figura {
 		PoligonoRegular other = (PoligonoRegular) obj;
 		if (CantidadDeLados != other.CantidadDeLados)
 			return false;
-		if (Float.floatToIntBits(apotema) != Float.floatToIntBits(other.apotema))
+		if (!super.equals(obj) || Float.floatToIntBits(apotema) != Float.floatToIntBits(other.apotema))
 			return false;
 		if (lado != other.lado)
 			return false;

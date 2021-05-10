@@ -15,20 +15,20 @@ public class Circulo extends Figura {
 
 	@Override
 	public float calcularPerimetro() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 2 * (float)Math.PI * this.radio;
 	}
 
 	@Override
 	public float calcularSuperficie() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.radio + this.radio ;
+		
 	}
 
 	@Override
 	public String getValores() {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuilder sb = new StringBuilder("R=");
+		sb.append(radio);
+		return sb.toString();
 	}
 
 	public float getRadio() {
@@ -56,7 +56,7 @@ public class Circulo extends Figura {
 		if (getClass() != obj.getClass())
 			return false;
 		Circulo other = (Circulo) obj;
-		if (Float.floatToIntBits(radio) != Float.floatToIntBits(other.radio))
+		if (!super.equals(obj) || Float.floatToIntBits(radio) != Float.floatToIntBits(other.radio))
 			return false;
 		return true;
 	}

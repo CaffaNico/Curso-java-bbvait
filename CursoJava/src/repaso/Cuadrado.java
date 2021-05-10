@@ -19,19 +19,20 @@ public class Cuadrado extends Figura {
 	@Override
 	public float calcularPerimetro() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 4*lado;
 	}
 
 	@Override
 	public float calcularSuperficie() {
 		// TODO Auto-generated method stub
-		return 0;
+		return lado*lado;
 	}
 
 	@Override
 	public String getValores() {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuilder sb = new StringBuilder("L=");
+		sb.append(lado);
+		return sb.toString();
 	}
 	
 
@@ -60,7 +61,8 @@ public class Cuadrado extends Figura {
 		if (getClass() != obj.getClass())
 			return false;
 		Cuadrado other = (Cuadrado) obj;
-		if (Float.floatToIntBits(lado) != Float.floatToIntBits(other.lado))
+		//Una ves que se que es un cuadrado le agrego la validacion del nombe
+		if (!super.equals(obj) || Float.floatToIntBits(lado) != Float.floatToIntBits(other.lado))
 			return false;
 		return true;
 	}
