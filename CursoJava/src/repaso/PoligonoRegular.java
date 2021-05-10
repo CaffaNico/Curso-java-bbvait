@@ -2,23 +2,23 @@ package repaso;
 
 public class PoligonoRegular extends Figura {
 	private float apotema;
-	private int CantidadDeLados;
+	private int cantidadDeLados;
 	private int lado;
 	
 	@Override
 	public float calcularPerimetro() {
 		// TODO Auto-generated method stub
-		return CantidadDeLados*lado;
+		return cantidadDeLados*lado;
 	}
 	@Override
 	public float calcularSuperficie() {
-		return (float) (this.apotema*this.apotema*this.CantidadDeLados*Math.tan(Math.PI/this.CantidadDeLados));
+		return (float) (this.apotema*this.apotema*this.cantidadDeLados*Math.tan(Math.PI/this.cantidadDeLados));
 	}
 	@Override
 	public String getValores() {
 		StringBuilder sb = new StringBuilder("A=");
 		sb.append(apotema +", CL=");
-		sb.append(CantidadDeLados+", L=");
+		sb.append(cantidadDeLados+", L=");
 		sb.append(lado);
 		return sb.toString();
 	}
@@ -26,8 +26,11 @@ public class PoligonoRegular extends Figura {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public PoligonoRegular(String nombre) {
+	public PoligonoRegular(String nombre,float apotema, int cantidadDeLados,int lado) {
 		super(nombre);
+		this.apotema = apotema;
+		this.cantidadDeLados = cantidadDeLados;
+		this.lado = lado;
 		// TODO Auto-generated constructor stub
 	}
 	public float getApotema() {
@@ -37,10 +40,10 @@ public class PoligonoRegular extends Figura {
 		this.apotema = apotema;
 	}
 	public int getCantidadDeLados() {
-		return CantidadDeLados;
+		return cantidadDeLados;
 	}
 	public void setCantidadDeLados(int cantidadDeLados) {
-		CantidadDeLados = cantidadDeLados;
+		this.cantidadDeLados = cantidadDeLados;
 	}
 	public int getLado() {
 		return lado;
@@ -52,7 +55,7 @@ public class PoligonoRegular extends Figura {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + CantidadDeLados;
+		result = prime * result + cantidadDeLados;
 		result = prime * result + Float.floatToIntBits(apotema);
 		result = prime * result + lado;
 		return result;
@@ -66,7 +69,7 @@ public class PoligonoRegular extends Figura {
 		if (getClass() != obj.getClass())
 			return false;
 		PoligonoRegular other = (PoligonoRegular) obj;
-		if (CantidadDeLados != other.CantidadDeLados)
+		if (cantidadDeLados != other.cantidadDeLados)
 			return false;
 		if (!super.equals(obj) || Float.floatToIntBits(apotema) != Float.floatToIntBits(other.apotema))
 			return false;
@@ -76,7 +79,7 @@ public class PoligonoRegular extends Figura {
 	}
 	@Override
 	public String toString() {
-		return "PoligonoRegular [apotema=" + this.apotema + ", CantidadDeLados=" + this.CantidadDeLados + ", lado=" + this.lado + "]";
+		return "PoligonoRegular [apotema=" + this.apotema + ", CantidadDeLados=" + this.cantidadDeLados + ", lado=" + this.lado + "]";
 	}
 	
 	
