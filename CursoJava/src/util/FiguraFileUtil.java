@@ -44,13 +44,13 @@ public class FiguraFileUtil {
 	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"\"}");
 	            	}else if(figura instanceof Rectangulo ) {
 	            		tipo = 3;
-	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"-"+"\"}");
+	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"\"}");
 	            	}else if(figura instanceof Triangulo ) {
 	            		tipo = 4;
-	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"-"+"\"}");
+	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"\"}");
 	            	}else if(figura instanceof PoligonoRegular ) {
 	            		tipo = 5;
-	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"-"+"\"}");
+	            		pw.println("{\"tipo\":" + tipo +","+ "\"nombre\"': " +figura.getNombre()+ "," + "\"valores\":"+ figura.getValores()+"\"}");
 	            	}
 	            	
 	            	
