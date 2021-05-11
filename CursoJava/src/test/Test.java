@@ -1,6 +1,7 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import repaso.Circulo;
 import repaso.Cuadrado;
@@ -28,8 +29,20 @@ public class Test {
 		String nombre_archivo ="\\figuras.txt";
 		FiguraFileUtil util = new FiguraFileUtil(figuras,nombre_archivo,path);
 		util.generarArchivo();
+		ArrayList<Figura> figuras2 = new ArrayList<Figura>();
+		figuras2=util.leerArchivo();
 		
+		for (Figura figura : figuras2) {
+			System.out.println(figura);
+			
+		}
 		
+		String texto = "{\"tipo\":4,\"nombre\":t1,\"valores\":A=12.0-B=8.0\"}";
+		
+		String[] textoA = texto.split("-");
+		
+		//System.out.println(textoA[0]);
+		//System.out.println(textoA[1].substring(2,textoA[1].length()-2));
 		//System.out.println(finNombre[0]+"--"+finNombre[1]+"--"+finNombre[2]);
 		//String nombre = frase.substring(18, 18+finNombre);
 		//System.out.println(nombre);
