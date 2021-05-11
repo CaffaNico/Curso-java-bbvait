@@ -17,8 +17,8 @@ public class PoligonoRegular extends Figura {
 	@Override
 	public String getValores() {
 		StringBuilder sb = new StringBuilder("A=");
-		sb.append(apotema +", CL=");
-		sb.append(cantidadDeLados+", L=");
+		sb.append(apotema+"-"+"CL=");
+		sb.append(cantidadDeLados+"-"+"L=");
 		sb.append(lado);
 		return sb.toString();
 	}

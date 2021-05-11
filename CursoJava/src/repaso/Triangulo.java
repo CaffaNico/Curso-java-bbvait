@@ -34,7 +34,7 @@ public class Triangulo extends Figura {
 	@Override
 	public String getValores() {
 		StringBuilder sb = new StringBuilder("A=");
-		sb.append(altura+", B= ");
+		sb.append(altura+"-"+"B=");
 		sb.append(base);
 		return sb.toString();
 	}
