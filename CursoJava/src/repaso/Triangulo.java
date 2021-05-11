@@ -38,6 +38,7 @@ public class Triangulo extends Figura {
 		sb.append(base);
 		return sb.toString();
 	}
+
 	public float getAltura() {
 		return altura;
 	}
@@ -72,6 +73,11 @@ public class Triangulo extends Figura {
 		if (!super.equals(obj) || Float.floatToIntBits(base) != Float.floatToIntBits(other.base))
 			return false;
 		return true;
+	}
+	
+	@Override
+	public String toString() {
+		return "Triangulo [altura=" + altura + ", base=" + base + "]";
 	}
 	
 	

@@ -16,14 +16,14 @@ public class Test {
 	public static void main(String[] args) {
 		Cuadrado c1 = new Cuadrado("c1",10);
 		Circulo cir1 = new Circulo("cir1",7);
-		Triangulo t1 = new Triangulo("t1",12,8);
+		Triangulo t1 = new Triangulo("t1",12,80);
 		Rectangulo r1 = new Rectangulo("r1",16,10);
-		PoligonoRegular pr1= new PoligonoRegular("pr1",10,8,8);
+		PoligonoRegular pr1= new PoligonoRegular("pr1",10,80,800);
 		ArrayList<Figura> figuras = new ArrayList<Figura>();
 		figuras.add(c1);
 		figuras.add(cir1);
-		figuras.add(t1);
 		figuras.add(r1);
+		figuras.add(t1);
 		figuras.add(pr1);
 		String path= "C:\\FigurasUtil";
 		String nombre_archivo ="\\figuras.txt";
@@ -36,10 +36,7 @@ public class Test {
 			System.out.println(figura);
 			
 		}
-		
-		String texto = "{\"tipo\":4,\"nombre\":t1,\"valores\":A=12.0-B=8.0\"}";
-		
-		String[] textoA = texto.split("-");
+
 		
 		//System.out.println(textoA[0]);
 		//System.out.println(textoA[1].substring(2,textoA[1].length()-2));
