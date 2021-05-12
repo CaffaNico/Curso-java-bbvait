@@ -1,8 +1,6 @@
 package test;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-
 import repaso.Circulo;
 import repaso.Cuadrado;
 import repaso.Figura;
