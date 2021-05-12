@@ -3,7 +3,7 @@ package repaso;
 public class PoligonoRegular extends Figura {
 	private float apotema;
 	private int cantidadDeLados;
-	private int lado;
+	private float lado;
 	
 	@Override
 	public float calcularPerimetro() {
@@ -45,10 +45,10 @@ public class PoligonoRegular extends Figura {
 	public void setCantidadDeLados(int cantidadDeLados) {
 		this.cantidadDeLados = cantidadDeLados;
 	}
-	public int getLado() {
+	public float getLado() {
 		return lado;
 	}
-	public void setLado(int lado) {
+	public void setLado(float lado) {
 		this.lado = lado;
 	}
 	@Override
@@ -57,7 +57,7 @@ public class PoligonoRegular extends Figura {
 		int result = 1;
 		result = prime * result + cantidadDeLados;
 		result = prime * result + Float.floatToIntBits(apotema);
-		result = prime * result + lado;
+		result = (int) (prime * result + lado);
 		return result;
 	}
 	@Override
