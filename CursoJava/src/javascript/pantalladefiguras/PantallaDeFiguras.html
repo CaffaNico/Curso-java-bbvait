@@ -32,10 +32,13 @@
 		caja.style.visibility ="visible";
 		
 		if(selected == "Cuadrado"){
-	     document.getElementById("div1").innerHTML="Cuadrado Lado 10";
+			
+	        document.getElementById("div1").innerHTML="Cuadrado Lado 10";
 	     
 		}else if(selected == "Circulo"){
+			
 			document.getElementById("div1").innerHTML="Circulo radio 10";
+			
 		}else if(selected == "Triangulo"){
 			
 			document.getElementById("div1").innerHTML="Triangulo altura 10, base 20";
@@ -60,7 +63,9 @@
 
 <input id="boton" type="button" onclick="agregar()" value="Rellenar Select" />
 
-<select style="visibility:hidden" id="Figuras" onchange="mostrarDatos()"> </select>
+<select style="visibility:hidden" id="Figuras" onchange="mostrarDatos()">
+	<option>Selecciona una Figura</option>
+ </select>
 
 <br/>
 
