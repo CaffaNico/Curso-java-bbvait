@@ -27,29 +27,40 @@
 	function mostrarDatos(){
 		var combo = document.getElementById("Figuras");
 		var selected = combo.options[combo.selectedIndex].text;
-		var caja = document.getElementById("div1");
 		
-		caja.style.visibility ="visible";
 		
 		if(selected == "Cuadrado"){
-			
-	        document.getElementById("div1").innerHTML="Cuadrado Lado 10";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div1").style.display="block";
+			document.getElementById("div3").style.display="none";
 	     
 		}else if(selected == "Circulo"){
-			
-			document.getElementById("div1").innerHTML="Circulo radio 10";
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="block";
+			document.getElementById("div3").style.display="none";
+			document.getElementById("div4").style.display="none";
+			document.getElementById("div5").style.display="none";
 			
 		}else if(selected == "Triangulo"){
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div3").style.display="block";
+			document.getElementById("div4").style.display="none";
+			document.getElementById("div5").style.display="none";
 			
-			document.getElementById("div1").innerHTML="Triangulo altura 10, base 20";
 			
 		}else if(selected == "Rectangulo"){
-			
-			document.getElementById("div1").innerHTML="Rectangulo altura 20, base 30";
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div3").style.display="none";
+			document.getElementById("div4").style.display="block";
 			
 		}else if(selected == "Poligono"){
-			
-			document.getElementById("div1").innerHTML="Poligono numero de lados 4, apotema 20, lado 2";
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div3").style.display="none";
+			document.getElementById("div4").style.display="none";
+			document.getElementById("div5").style.display="block";
 		}
 	}
 	
@@ -68,8 +79,72 @@
  </select>
 
 <br/>
+<br/>
+<div id="div1" style="display:none">
 
-<div id="div1" style="visibility:hidden">
+	<form action="" id="formCua" >
+	
+		<p>Nombre <input type="text" /></p>
+		<br/>
+		<p>Lado   <input type="number" /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+<div id="div2" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" /></p>
+		
+		<p>Radio   <input type="number" /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+<div id="div3" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" /></p>
+		
+		<p>Altura   <input type="number" /></p>
+		<p>Base  <input type="number" /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+<div id="div4" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" /></p>
+		
+		<p>Altura   <input type="number" /></p>
+		
+		<p>Base  <input type="number" /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+
+<div id="div5" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" /></p>
+		
+		<p>Lado   <input type="number" /></p>
+		
+		<p>Numero de lados <input type="number" /></p>
+		
+		<p>Apotema <input type="number" /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
 	
 </div>
 
