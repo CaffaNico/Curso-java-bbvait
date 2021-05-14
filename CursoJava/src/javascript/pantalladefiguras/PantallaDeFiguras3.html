@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<script type="text/javascript">
+	
+	
+	window.onload = function() {
+		const tiempoTranscurrido = Date.now();
+		const hoy = new Date(tiempoTranscurrido);
+		
+	    var fechaHoy = hoy.toLocaleDateString();
+		
+		var caja = document.getElementById("fecha").innerHTML="Fecha de hoy: "+fechaHoy;
+		
+		};
+	
+	
+	function agregar(){
+		var array = ["Cuadrado", "Circulo","Triangulo","Rectangulo","Poligono"];
+		var select = document.getElementById("Figuras");
+		var boton = document.getElementById("boton");
+		boton.disabled = true;
+		select.style.visibility ="visible";
+		//  var option = document.createElement('option');
+		  for (var i=0; i<array.length; i++){ 
+			  var option = document.createElement('option');
+			  option.value = array[i];
+			  option.text = array[i];
+			  option.id = array[i];
+			  select.appendChild(option);
+			  }
+		  
+	}
+	
+	function mostrarDatos(){
+		var combo = document.getElementById("Figuras");
+		var selected = combo.options[combo.selectedIndex].text;
+		
+		
+		if(selected == "Cuadrado"){
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div1").style.display="block";
+			document.getElementById("div3").style.display="none";
+	     
+		}else if(selected == "Circulo"){
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="block";
+			document.getElementById("div3").style.display="none";
+			document.getElementById("div4").style.display="none";
+			document.getElementById("div5").style.display="none";
+			
+		}else if(selected == "Triangulo"){
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div3").style.display="block";
+			document.getElementById("div4").style.display="none";
+			document.getElementById("div5").style.display="none";
+			
+			
+		}else if(selected == "Rectangulo"){
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div3").style.display="none";
+			document.getElementById("div4").style.display="block";
+			
+		}else if(selected == "Poligono"){
+			document.getElementById("div1").style.display="none";
+			document.getElementById("div2").style.display="none";
+			document.getElementById("div3").style.display="none";
+			document.getElementById("div4").style.display="none";
+			document.getElementById("div5").style.display="block";
+		}
+	}
+	
+
+	
+
+	
+
+</script>
+</head>
+<body>
+
+
+<input id="boton" type="button" onclick="agregar()" value="Rellenar Select" />
+
+<select style="visibility:hidden" id="Figuras" onchange="mostrarDatos()">
+	<option>Selecciona una Figura</option>
+ </select>
+
+<br/>
+
+
+<div id="fecha" style="float:right">
+	
+</div>
+
+
+<div id="div1" style="display:none">
+
+	<form action="" id="formCua" >
+	
+		<p>Nombre <input type="text" required /></p>
+		<br/>
+		<p>Lado   <input type="number" required /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+<div id="div2" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" required /></p>
+		
+		<p>Radio   <input type="number" required /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+<div id="div3" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text"  required /></p>
+		
+		<p>Altura   <input type="number" required /></p>
+		<p>Base  <input type="number" required /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+<div id="div4" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" required /></p>
+		
+		<p>Altura   <input type="number" required /></p>
+		
+		<p>Base  <input type="number" required /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+
+<div id="div5" style="display:none">
+ <form action="" id="formCir">
+	
+		<p>Nombre <input type="text" required/></p>
+		
+		<p>Lado   <input type="number" required /></p>
+		
+		<p>Numero de lados <input type="number" required /></p>
+		
+		<p>Apotema <input type="number" required /></p>
+		
+		<p><input type="submit" value="Enviar"></p>
+	</form>
+	
+</div>
+
+</body>
+</html>
